@@ -47,4 +47,4 @@ image URLs at the top of `index.html`.
 
 The AuteurFrame software is free software under the GNU AGPL v3; see its
 [repository](https://github.com/joyghoshs/auteurframe). The website text, design, launch film, screenshots and images
-are © 2026 Joy Ghosh, all rights reserved. The fonts are licensed under the SIL Open Font License 1.1, included in `assets/fonts/FONTS-LICENSE.txt`.
+are © 2026 Abdur Rahman Maheer, all rights reserved. The fonts are licensed under the SIL Open Font License 1.1, included in `assets/fonts/FONTS-LICENSE.txt`.
