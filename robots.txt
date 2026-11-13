@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://joyghoshs.github.io/Auteur-frameProject/sitemap.xml
