@@ -135,6 +135,7 @@ section.tight { padding: 90px 0; }
 .screen-cap { margin-top: 18px; color: var(--ink-2); font-size: 15.5px; text-align: center; min-height: 1.6em; }
 
 .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.features > .feature:nth-last-child(-n+2) { grid-column: span 2; }
 .feature { padding: 26px; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(255, 255, 255, .025); }
 .feature .ic { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 18px; background: color-mix(in srgb, var(--c) 16%, transparent); color: var(--c); }
 .feature .ic svg { width: 22px; height: 22px; }
@@ -232,6 +233,8 @@ footer .about { max-width: 360px; margin-top: 14px; line-height: 1.6; }
 
 @media (max-width: 1080px) {
   .features, .tpl-grid { grid-template-columns: repeat(3, 1fr); }
+  .features > .feature:nth-last-child(-n+2) { grid-column: auto; }
+  .features > .feature:last-child { grid-column: span 3; }
   .contrib { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: repeat(3, 1fr); }
   .stat:nth-child(3) { border-right: 0; }
@@ -245,6 +248,7 @@ footer .about { max-width: 360px; margin-top: 14px; line-height: 1.6; }
   .nav.open .nav-links a { padding: 12px; font-size: 16px; }
   .flow, .license { grid-template-columns: 1fr; }
   .features, .tpl-grid { grid-template-columns: repeat(2, 1fr); }
+  .features > .feature:last-child, .features > .feature:nth-last-child(-n+2) { grid-column: auto; }
   .films { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
   .f-a, .f-b { grid-column: span 2; grid-row: span 2; }
   .f-c { grid-column: span 1; }
@@ -255,6 +259,7 @@ footer .about { max-width: 360px; margin-top: 14px; line-height: 1.6; }
 }
 @media (max-width: 560px) {
   .features, .tpl-grid, .contrib { grid-template-columns: 1fr; }
+  .features > .feature:last-child { grid-column: auto; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stat { border-right: 1px solid var(--line) !important; border-bottom: 1px solid var(--line); }
   .stat:nth-child(2n) { border-right: 0 !important; }
