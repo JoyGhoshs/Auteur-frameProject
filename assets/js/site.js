@@ -14,20 +14,25 @@
     toggle.setAttribute('aria-expanded', 'false');
   }));
 
-  const player = document.querySelector('.player');
-  const video = player.querySelector('video');
   const small = window.matchMedia('(max-width: 900px)').matches || (navigator.connection && navigator.connection.saveData);
-  const src = small ? video.dataset.small : video.dataset.large;
-  const play = () => {
-    if (!video.getAttribute('src')) video.setAttribute('src', src);
-    video.controls = true;
-    player.classList.add('playing');
-    video.play().catch(() => null);
-  };
-  player.querySelector('.play').addEventListener('click', play);
+  const players = {};
+  document.querySelectorAll('.player').forEach((player) => {
+    const video = player.querySelector('video');
+    const src = small ? video.dataset.small : video.dataset.large;
+    const play = () => {
+      document.querySelectorAll('.player video').forEach((v) => { if (v !== video) v.pause(); });
+      if (!video.getAttribute('src')) video.setAttribute('src', src);
+      video.controls = true;
+      player.classList.add('playing');
+      video.play().catch(() => null);
+    };
+    player.querySelector('.play').addEventListener('click', play);
+    players[player.id] = play;
+  });
   document.querySelectorAll('[data-play]').forEach((b) => b.addEventListener('click', () => {
-    document.getElementById('film').scrollIntoView({ behavior: 'smooth', block: 'center' });
-    setTimeout(play, 450);
+    const id = b.dataset.play || 'film';
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(players[id], 450);
   }));
 
   const tabsets = document.querySelectorAll('[data-tabs]');

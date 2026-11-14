@@ -25,7 +25,7 @@
 <meta name="twitter:title" content="AuteurFrame · Open-source motion, directed by agents">
 <meta name="twitter:description" content="A swarm of AI agents turns one sentence into a finished, narrated film. Free and open source.">
 <meta name="twitter:image" content="https://joyghoshs.github.io/Auteur-frameProject/assets/img/og.jpg">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=7d83f857fe">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AuteurFrame", "applicationCategory": "MultimediaApplication", "operatingSystem": "Linux, Windows (WSL2), Docker", "softwareVersion": "1.0.0", "license": "https://www.gnu.org/licenses/agpl-3.0.html", "author": {"@type": "Person", "name": "Abdur Rahman Maheer", "url": "https://github.com/joyghoshs"}, "url": "https://joyghoshs.github.io/Auteur-frameProject/", "codeRepository": "https://github.com/joyghoshs/auteurframe", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Open-source AI motion studio. A swarm of agents researches, writes, animates, critiques and renders narrated films from one brief."}</script>
 </head>
 <body>
@@ -34,7 +34,7 @@
   <div class="wrap">
     <a class="brand" href="#top" aria-label="AuteurFrame home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.2 26.6 28.8H21.9L16 14.4 10.1 28.8H5.4Z" fill="#F5F7FA"/><path d="M4.6 18.1h22.8v3.6H4.6Z" fill="#4D74FF"/></svg><span>Auteur<span class="fw">Frame</span></span></a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#film">Film</a><a href="#how">How it works</a><a href="#studio">Studio</a><a href="#templates">Templates</a><a href="#start">Get started</a><a href="#license">Open source</a><a href="#faq">FAQ</a>
+      <a href="#film">Film</a><a href="#showreel">Showreel</a><a href="#how">How it works</a><a href="#studio">Studio</a><a href="#templates">Templates</a><a href="#start">Get started</a><a href="#license">Open source</a><a href="#faq">FAQ</a>
     </nav>
     <span class="spacer"></span>
     <a class="btn sm gh" href="https://github.com/joyghoshs/auteurframe" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
@@ -80,6 +80,22 @@
 </section>
 
 <div class="divider"></div>
+
+<section id="showreel">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Showreel</span><h2>2D, 3D and <span class="serif grad">every style.</span></h2><p>Cartoon casts that act, rigged 3D characters, both in the same shot, and all 19 style packs, cut on the beat. Every frame of this reel was made and rendered inside AuteurFrame.</p></div>
+    <div class="player reveal" id="reel">
+      <div class="player-inner">
+        <video preload="none" playsinline poster="assets/media/showreel-poster.jpg" data-large="assets/media/auteurframe-showreel-1080.mp4" data-small="assets/media/auteurframe-showreel-720.mp4" aria-label="AuteurFrame showreel"></video>
+        <button class="play" aria-label="Play the AuteurFrame showreel">
+          <span class="play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+          <span class="play-meta"><b>The showreel</b><span>53 seconds · made with AuteurFrame</span></span>
+        </button>
+      </div>
+    </div>
+    <div class="reel-chips reveal"><span>2D characters</span><span>3D characters</span><span>2D + 3D in one shot</span><span>19 style packs</span><span>Beat-synced sound</span></div>
+  </div>
+</section>
 
 <section id="how">
   <div class="wrap">
@@ -231,6 +247,6 @@ docker compose -f docker/docker-compose.yml up --build</code></pre></div></div>
     <div class="legal"><span>© 2026 Abdur Rahman Maheer. AuteurFrame is free software under the GNU AGPL v3, with no warranty.</span><span>Made by Abdur Rahman Maheer.</span></div>
   </div>
 </footer>
-<script src="assets/js/site.js" defer></script>
+<script src="assets/js/site.js?v=7d83f857fe" defer></script>
 </body>
 </html>

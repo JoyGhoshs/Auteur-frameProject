@@ -270,3 +270,6 @@ footer .about { max-width: 360px; margin-top: 14px; line-height: 1.6; }
   .player .play-btn { animation: none; }
   .step, .tpl, .btn, .film img { transition: none; }
 }
+.reel-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 28px; }
+.reel-chips span { padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .14); background: rgba(255, 255, 255, .04); font-size: 14px; color: var(--ink-2); }
+#showreel .player { margin-top: 40px; }
